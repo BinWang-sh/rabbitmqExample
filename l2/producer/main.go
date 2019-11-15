@@ -25,8 +25,8 @@ func main() {
 			defer ch.Close()
 
 			q, err := ch.QueueDeclare(
-				config.QUEUENAME,
-				true, //durable
+				config.QUEUENAME, //Queue name
+				true,             //durable
 				false,
 				false,
 				false,

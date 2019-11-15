@@ -33,10 +33,18 @@ func main() {
 
 			failOnError(err, "Failed to declare a queue")
 
+			err = ch.Qos(
+				1,     // prefetch count
+				0,     // prefetch size
+				false, // global
+			)
+
+			failOnError(err, "Failed to set QoS")
+
 			msgs, err := ch.Consume(
 				q.Name,
 				"MsgWorkConsumer",
-				false,
+				false, //Auto Ack
 				false,
 				false,
 				false,
@@ -48,7 +56,7 @@ func main() {
 			}
 
 			for msg := range msgs {
-				log.Printf("In %d consume a message: %s\n", 0, msg.Body)
+				log.Printf("In %d consume a message: %s\n", routineNum, msg.Body)
 				log.Printf("Done")
 				msg.Ack(false) //Ack
 			}
