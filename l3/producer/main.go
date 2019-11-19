@@ -1,7 +1,7 @@
 package main
 
 import (
-	config "binTest/rabbitmqTest/t1/l2/conf"
+	config "binTest/rabbitmqTest/t1/l3/conf"
 	"fmt"
 	"log"
 	"os"
