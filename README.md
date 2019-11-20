@@ -9,3 +9,6 @@ l3 Example of using fanout exchange
 l4 Example of using direct exchange
 
 l5 Example of using topic exchange
+
+l6 Example of RPC
+
