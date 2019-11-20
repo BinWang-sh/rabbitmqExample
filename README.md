@@ -7,3 +7,5 @@ l2 Message publisher and consumer example with message ack and durable
 l3 Example of using fanout exchange
 
 l4 Example of using direct exchange
+
+l5 Example of using topic exchange
